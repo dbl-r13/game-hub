@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/media-query": "^3.3.0",
     "@chakra-ui/react": "^3.8.1",
     "@emotion/react": "^11.14.0",
+    "framer-motion": "^12.4.7",
     "next-themes": "^0.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -1,11 +1,14 @@
 import { Button, ButtonGroup, HStack } from "@chakra-ui/react";
+import { Show, Hide } from "@chakra-ui/media-query";
 
 function App() {
   return (
-    <HStack>
-      <Button>Click me</Button>
-      <Button>Click me</Button>
-    </HStack>
+    <>
+      <Button>Click Me</Button>
+      <Hide breakpoint="(max-width: 1024px)">
+        <Button>Click Me LG</Button>
+      </Hide>
+    </>
   );
 }
 
