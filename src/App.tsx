@@ -1,13 +1,30 @@
-import { Button, ButtonGroup, HStack } from "@chakra-ui/react";
-import { Show, Hide } from "@chakra-ui/media-query";
+// import { Show, Hide } from "@chakra-ui/media-query";
+
+import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Hide } from "@chakra-ui/media-query";
 
 function App() {
   return (
     <>
-      <Button>Click Me</Button>
-      <Hide breakpoint="(max-width: 1024px)">
-        <Button>Click Me LG</Button>
-      </Hide>
+      <Grid
+        templateAreas={{
+          base: `"nav" "main"`,
+          lg: `"nav nav" "aside main"`,
+        }}
+      >
+        <GridItem area="nav" bg="coral">
+          Nav
+        </GridItem>
+        <Hide breakpoint="(max-width: 1024px)">
+          <GridItem area="aside" bg="gold">
+            Aside
+          </GridItem>
+        </Hide>
+
+        <GridItem area="main" bg="dodgerblue">
+          Main
+        </GridItem>
+      </Grid>
     </>
   );
 }
